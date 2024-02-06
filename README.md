@@ -39,4 +39,6 @@ sudo systemctl start grub-randomizer.service
 
 Info
 
-this script will work with any amount of grub themes without modifying the script.
+this script will work with any amount of grub themes without modifying the script. this script also will not choose the same grub theme 2 times in a row.
+
+
