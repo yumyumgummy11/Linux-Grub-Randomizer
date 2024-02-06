@@ -22,6 +22,7 @@ Description=randomize grub
 
 [Service]
 ExecStart=sudo python3 /FILE/PATH/TO/SCRIPT.py
+Type=oneshot
 
 [Install]
 WantedBy=multi-user.target
