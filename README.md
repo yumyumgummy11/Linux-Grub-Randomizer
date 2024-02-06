@@ -27,7 +27,8 @@ Type=oneshot
 [Install]
 WantedBy=multi-user.target
 ```
-4. now you need to enable the serive. copy these commands and run them in the terminal
+4. now you need to enable the service
+  copy these commands and run them in the terminal
 ```
 sudo systemctl enable grub-randomizer.service
 ```
