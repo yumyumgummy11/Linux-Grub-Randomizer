@@ -1,4 +1,4 @@
-Installation
+###Installation
 
 NOTE: you need to have previously install a grub theme for this to work, as the necessary file paths would not be there otherwise
 
@@ -26,7 +26,7 @@ ExecStart=sudo python3 /FILE/PATH/TO/SCRIPT.py
 WantedBy=multi-user.target
 ```
 4. now you need to enable the serive
-  copy these commands and run them in the terminal
+    copy these commands and run them in the terminal
 ```
 sudo systemctl enable grub-randomizer.service
 ```
