@@ -1,4 +1,4 @@
-###Installation
+###Installation###
 
 NOTE: you need to have previously install a grub theme for this to work, as the necessary file paths would not be there otherwise
 
