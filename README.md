@@ -1,7 +1,7 @@
 Installation
 
 
-NOTE: you need to have previously install a grub theme for this to work, as the necessary file paths would not be there otherwise
+NOTE: you need to have previously install a grub theme for this to work, as the necessary file paths would not be there otherwise. This has only been run on linux mint so you may need to change the file paths in the script for other linux distros.
 
 1. Download the grub_randomizer.py file. it does not matter where this file is located but after this is set up its best not to move it.
 
