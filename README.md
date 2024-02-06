@@ -9,8 +9,7 @@ NOTE: you need to have previously install a grub theme for this to work, as the 
 ```
 sudo touch /etc/systemd/system/grub-randomizer.service
 ```
-
-  now copy this code into the grub-randomizer.service file and replace the file path to where you put the script. EX filepath: /home/USER/Downloads/grub_randomizer.py
+3. Now copy this code into the grub-randomizer.service file and replace the file path to where you put the script. EX filepath: /home/USER/Downloads/grub_randomizer.py
   
   you can use this command to edit the grub-randomizer.service file
   ```
@@ -26,7 +25,7 @@ ExecStart=sudo python3 /FILE/PATH/TO/SCRIPT.py
 [Install]
 WantedBy=multi-user.target
 ```
-  now you need to enable the serive
+4. now you need to enable the serive
   copy these commands and run them in the terminal
 ```
 sudo systemctl enable grub-randomizer.service
