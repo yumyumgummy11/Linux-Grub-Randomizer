@@ -34,4 +34,5 @@ WantedBy=multi-user.target
 
 
 Info
+
 this script will work with any amount of grub themes without modifying the script.
