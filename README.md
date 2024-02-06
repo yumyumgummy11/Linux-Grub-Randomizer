@@ -11,6 +11,7 @@ sudo touch /etc/systemd/system/grub-randomizer.service
 ```
 
   now copy this code into the grub-randomizer.service file and replace the file path to where you put the script. EX filepath: /home/USER/Downloads/grub_randomizer.py
+  
   you can use this command to edit the grub-randomizer.service file
   ```
   sudo nano /etc/systemd/system/grub-randomizer.service
