@@ -28,8 +28,12 @@ WantedBy=multi-user.target
 ```
   now you need to enable the serive
   copy these commands and run them in the terminal
-```sudo systemctl enable grub-randomizer.service```
-```sudo systemctl start grub-randomizer.service```
+```
+sudo systemctl enable grub-randomizer.service
+```
+```
+sudo systemctl start grub-randomizer.service
+```
   now reboot
 
 
