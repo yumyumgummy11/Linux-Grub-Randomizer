@@ -31,20 +31,19 @@ def choose_random_theme(): #choose a random theme based on the list given from t
 
 def generate_command(): #generates the command for the grub
     new_theme = choose_random_theme()
-    theme_command = 'GRUB_THEME="/boot/grub/themes/PLACEHOLDER/theme.txt"'
-    command = theme_command.replace('PLACEHOLDER',new_theme)
+    command = f'GRUB_THEME="/boot/grub/themes/{new_theme}/theme.txt"'
     return command
 
-def make_backup(): #make a backup of the file
+def make_backup(fp): #make a backup of the file
     f = ""
-    with open('/etc/default/grub','r') as file:
+    with open(fp,'r') as file:
         f = file.read()
 
-    with open('/etc/default/grub_backup.bak','w') as file:
+    with open(fp+".bak",'w') as file:
         file.write(f)
 
-def edit_file(): #edit the grub file and repalce with new command
-    with open('/etc/default/grub','r') as file:
+def edit_file(fp): #edit the grub file and repalce with new command
+    with open(fp,'r') as file:
         data = file.readlines()
     
     command = generate_command()
@@ -53,9 +52,11 @@ def edit_file(): #edit the grub file and repalce with new command
             data[index] = command + '\n'
         
     
-    with open('/etc/default/grub','w') as file:
+    with open(fp,'w') as file:
         file.writelines(data)
 
-make_backup()
-edit_file()
+fp = "/etc/default/grub"
+
+make_backup(fp)
+edit_file(fp)
 system("sudo grub-mkconfig -o /boot/grub/grub.cfg") #run the grub config to apply the changes
