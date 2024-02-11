@@ -7,7 +7,7 @@ def get_grub_themes(): #get a list of all themes in the /boot/grub/themes direct
         quit()
     return theme_list
 
-def choose_random_theme(): #choose a random theme based on the list given from the get_grub_themes function
+def get_current_theme(): #choose a random theme based on the list given from the get_grub_themes function
     theme_list = get_grub_themes()
     
     if len(theme_list) > 1:
@@ -21,16 +21,17 @@ def choose_random_theme(): #choose a random theme based on the list given from t
                 for x in theme_list:
                     if x in i:
                         remove_queue.append(x)
-                        break
-        
-        for i in remove_queue:
-            theme_list.remove(i)                
+                        return remove_queue
+
+def choose_new_theme(remove_queue, theme_list):
+    for i in remove_queue:
+        theme_list.remove(i)
 
     new_theme = theme_list[randrange(0,len(theme_list))]
     return new_theme
 
 def generate_command(): #generates the command for the grub
-    new_theme = choose_random_theme()
+    new_theme = choose_new_theme(get_current_theme(),get_grub_themes())
     command = f'GRUB_THEME="/boot/grub/themes/{new_theme}/theme.txt"'
     return command
 
