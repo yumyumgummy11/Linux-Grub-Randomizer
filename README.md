@@ -36,7 +36,15 @@ sudo systemctl enable grub-randomizer.service
 ```
 sudo systemctl start grub-randomizer.service
 ```
-  now reboot
+
+5. now you need to edit the grub file
+   inside this directory add this line to the top
+```
+sudo nano /etc/default/grub
+
+GRUB_THEME=/boot/grub/themes/GRUB_THEME/theme.txt
+```
+now reboot
 
 
 Info
